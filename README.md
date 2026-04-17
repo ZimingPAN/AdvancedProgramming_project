@@ -1,6 +1,3 @@
-# Advanced Programming Text Adventure
-
-A command-line Korean text adventure game built from the project PDF requirements.
 
 ## Overview
 
@@ -9,7 +6,6 @@ The game simulates campus exploration with movement, item trading, quests, diffi
 Core implementation goals:
 
 - Match the required command loop behavior.
-- Follow the teacher sample output style for key interactions.
 - Keep event clues and quest answers configurable from an external file.
 
 ## Project Files
@@ -58,20 +54,6 @@ Edit `event_info.json` to change clue text and quest answers:
 - `quest_answers.corruption`: answer expected in 본관.
 - `quest_answers.hygiene`: answer expected in 세브란스.
 
-## Teacher-Style Output Notes
-
-The game output is aligned with the sample format from the PDF:
-
-- Movement lines print location with optional interaction tags, for example:
-
-```text
-정문에 도착했다. [임무]
-스타벅스에 도착했다. [구매]
-```
-
-- Quest completion lines follow the same phrasing pattern as the sample.
-- Status and buy/sell lines use the same key-value style and numbering format.
-
 ## Save/Load Format
 
 Save files use JSON with:
@@ -82,9 +64,3 @@ Save files use JSON with:
 - Difficulty
 - Quest states
 - Full input history
-
-## QA Checklist
-
-- Syntax check with `python -m py_compile main.py`
-- End-to-end scripted run covering movement, shopping, quests, save/load, and ending
-- Output inspected against teacher sample pages
