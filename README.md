@@ -64,3 +64,4 @@ Save files use JSON with:
 - Difficulty
 - Quest states
 - Full input history
+
