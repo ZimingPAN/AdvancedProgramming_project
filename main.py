@@ -327,14 +327,18 @@ class TextAdventureGame:
             return
 
         while True:
+            available_items = [name for name, count in self.bag.items() if count > 0]
             print("가방을 엽니다 [" + self._bag_summary() + "]")
+            for idx, item_name in enumerate(available_items, start=1):
+                print(f"{idx}) {item_name} x{self.bag[item_name]}")
+
             choice = self.ask("물건 이름 또는 번호 입력 (엔터=종료): ")
             if choice == "":
                 print("가방을 닫습니다.")
                 return
 
-            item_name = self._resolve_item_choice(choice)
-            if item_name is None or self.bag.get(item_name, 0) <= 0:
+            item_name = self._resolve_item_choice(choice, available_items)
+            if item_name is None:
                 print("사용할 수 없는 물건이다.")
                 continue
 
