@@ -1,0 +1,10 @@
+# Local docs are kept for reference but excluded from Git tracking
+/doc/
+
+# Python environment and cache
+/.venv/
+__pycache__/
+*.pyc
+
+# Runtime save files
+*.save.json
