@@ -8,3 +8,6 @@ __pycache__/
 
 # Runtime save files
 *.save.json
+
+# Local submission archive
+advancedprogramming_project_submission.zip
